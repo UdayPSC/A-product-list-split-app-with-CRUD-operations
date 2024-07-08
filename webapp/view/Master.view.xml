@@ -1,0 +1,29 @@
+<mvc:View
+    controllerName="project.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="masterPage" title="Tech Products" >
+        <headerContent>
+            <Button id="deleteButton" text="Delete" icon="sap-icon://delete" press="onDeleteSelected" enabled="{viewModel>/deleteEnabled}"/>
+            <Button id="createButton" text="Create" icon="sap-icon://create-form" press="onCreatePress" />
+            <Button id="exportButton" text="Export" icon="sap-icon://excel-attachment" press="onExportToExcel" />
+        </headerContent>
+        <content>
+            <SearchField id="searchField" search="onSearch" />
+            <List
+                id="itemList"
+                items="{/items}"
+                mode="MultiSelect"
+                selectionChange="onSelectionChange"
+                itemPress="onItemPress">
+                <StandardListItem id="_IDGenStandardListItem1"
+                    title="{name}"
+                    description="{description}"
+                    info="{parts: [{path: 'units'}], formatter: '.formatStockStatusText'}"
+                    infoState="{parts: [{path: 'units'}], formatter: '.formatStockStatus'}"
+                    highlight="{parts: [{path: 'units'}], formatter: '.formatStockStatus'}"
+                    type="Active" />
+            </List>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,31 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout">
+  <Dialog id="createDialog" title="Create Product">
+    <content>
+      <l:VerticalLayout id="VBox10" class="sapUiContentPadding" width="100%">
+        <Label id="Label10" text="Name" design="Bold" required="true" />
+        <Input id="inputName" placeholder="Enter product name" liveChange="onInputChange" valueState="{viewModel>/nameState}" valueStateText="{viewModel>/nameStateText}" />
+        
+        <Label id="Label20" text="Description" design="Bold" required="true" />
+        <Input id="inputDescription" placeholder="Enter product description" liveChange="onInputChange" valueState="{viewModel>/descriptionState}" valueStateText="{viewModel>/descriptionStateText}" />
+        
+        <Label id="Label30" text="Units" design="Bold" required="true" />
+        <Input id="inputUnits" type="Number" placeholder="Enter number of units" liveChange="onInputChange" valueState="{viewModel>/unitsState}" valueStateText="{viewModel>/unitsStateText}" />
+        
+        <Label id="Label40" text="Price" design="Bold" required="true" />
+        <Input id="inputPrice" type="Number" placeholder="Enter price" liveChange="onInputChange" valueState="{viewModel>/priceState}" valueStateText="{viewModel>/priceStateText}" />
+        
+        <Label id="Label50" text="Company Name" design="Bold" required="true" />
+        <Input id="inputCompanyName" placeholder="Enter company name" liveChange="onInputChange" valueState="{viewModel>/companyNameState}" valueStateText="{viewModel>/companyNameStateText}" />
+      </l:VerticalLayout>
+    </content>
+    <beginButton>
+      <Button id="saveButton" text="Save" press="onSavePress" type="Emphasized" />
+    </beginButton>
+    <endButton>
+      <Button id="cancelButton" text="Cancel" press="onCancelPress" />
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>

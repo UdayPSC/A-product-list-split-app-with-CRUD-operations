@@ -1,0 +1,32 @@
+.customTitle {
+    font-size: 1.25rem !important;
+}
+
+.customGreenButton .sapMBtnInner {
+    
+    color: rgba(222, 225, 228, 0.407) !important;
+    border-radius: 50% !important;
+    width: 2rem;
+    height: 2rem;
+}
+
+.customRedButton .sapMBtnInner {
+   
+    color: rgba(222, 225, 228, 0.407) !important;
+    border-radius: 50% !important;
+    border-radius: 50% !important;
+    width: 2rem;
+    height: 2rem;
+}
+
+.customGreenButton .sapMBtnIcon, .customRedButton .sapMBtnIcon {
+    width: 100%;
+    padding: 0;
+    line-height: 2.4rem;
+    font-size: 1rem;
+}
+
+.darkText {
+    color: #333333 !important;
+    font-weight: normal !important;
+  }

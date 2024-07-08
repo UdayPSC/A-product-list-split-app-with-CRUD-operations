@@ -1,0 +1,56 @@
+<mvc:View
+    controllerName="project.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+    <Page id="detailPage" title="Item Details" showNavButton="false" navButtonPress="onNavBack">
+    <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+					<Label id="_IDGenLabel7" text="Split Application mode" />
+					<Text id="_IDGenText1" text="Here you could change the Split Application mode. After the mode change, resize the browser window to see the difference in the master form behaviour." />
+					<RadioButtonGroup id="_IDGenRadioButtonGroup1" columns="1" width="500px" class="sapUiMediumMarginBottom" select=".onPressModeBtn">
+						<RadioButton id="RB1-1" text="show/hide" selected="true" custom:splitAppMode="ShowHideMode" />
+						<RadioButton id="RB1-2" text="stretch/compress" custom:splitAppMode="StretchCompressMode" />
+						<RadioButton id="RB1-3" text="hide" custom:splitAppMode="HideMode" />
+						<RadioButton id="RB1-4" text="popover" custom:splitAppMode="PopoverMode" />
+					</RadioButtonGroup>
+				</VBox>
+    <content>
+      <f:SimpleForm id="itemForm"
+        editable="true"
+        layout="ResponsiveGridLayout">
+        <f:content>
+          <core:Title id="_IDGenTitle1" text="Basic Information" />
+          <Label id="_IDGenLabel1" text="Name" />
+          <Input id="_IDGenInput1" value="{name}" editable="{viewModel>/isEditing}" />
+          
+          <Label id="_IDGenLabel2" text="Description" />
+          <TextArea id="_IDGenTextArea1" value="{description}" editable="{viewModel>/isEditing}" rows="3" />
+          
+          <core:Title id="_IDGenTitle2" text="Stock and Pricing" />
+          <Label id="_IDGenLabel3" text="Units in Stock" />
+          <Input id="_IDGenInput2" value="{units}" editable="{viewModel>/isEditing}" type="Number" />
+          
+          <Label id="_IDGenLabel4" text="Price" />
+          <Input id="_IDGenInput3" value="{price}" editable="{viewModel>/isEditing}" type="Number" />
+          
+          <core:Title id="_IDGenTitle3" text="Company Information" />
+          <Label id="_IDGenLabel5" text="Company Name" />
+          <Input id="_IDGenInput4" value="{companyName}" editable="{viewModel>/isEditing}" />
+          
+          <Label id="_IDGenLabel6" text="Status" />
+          <CheckBox id="discontinuedCheckBox" selected="{discontinued}" editable="{viewModel>/isEditing}" text="Discontinued" />
+        </f:content>
+       </f:SimpleForm>
+    </content>
+    <footer>
+      <Toolbar id="_IDGenToolbar1">
+        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+        <Button id="_IDGenButton1" text="Edit" type="Emphasized" press="onEditPress" visible="{= !${viewModel>/isEditing}}" />
+        <Button id="_IDGenButton2" text="Save" type="Accept" press="onSavePress" visible="{viewModel>/isEditing}" />
+        <Button id="_IDGenButton3" text="Cancel" type="Reject" press="onCancelPress" visible="{viewModel>/isEditing}" />
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>

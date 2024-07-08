@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Samsung S21",
+      "description": "Latest smartphone with 5G connectivity",
+      "units": 100,
+      "price": 799.99,
+      "companyName": "Samsung",
+      "discontinued": false
+    },
+    {
+      "id": 2,
+      "name": "Apple MacBook Pro 13",
+      "description": "Powerful laptop with M1 chip",
+      "units": 50,
+      "price": 1299.00,
+      "companyName": "Apple",
+      "discontinued": false
+    },
+    {
+      "id": 3,
+      "name": "Sony WH-1000XM4",
+      "description": "Noise-cancelling wireless headphones",
+      "units": 200,
+      "price": 349.99,
+      "companyName": "Sony",
+      "discontinued": false
+    },
+    {
+      "id": 4,
+      "name": "Dell XPS 15",
+      "description": "High-performance laptop with 4K display",
+      "units": 30,
+      "price": 1999.99,
+      "companyName": "Dell",
+      "discontinued": false
+    },
+    {
+      "id": 5,
+      "name": "HP Envy 6055",
+      "description": "All-in-one wireless printer",
+      "units": 120,
+      "price": 129.99,
+      "companyName": "HP",
+      "discontinued": false
+    },
+    {
+      "id": 6,
+      "name": "Amazon Echo Dot (4th Gen)",
+      "description": "Smart speaker with Alexa",
+      "units": 80,
+      "price": 49.99,
+      "companyName": "Amazon",
+      "discontinued": false
+    },
+    {
+      "id": 7,
+      "name": "Bose SoundLink Revolve",
+      "description": "Portable Bluetooth speaker",
+      "units": 60,
+      "price": 199.00,
+      "companyName": "Bose",
+      "discontinued": false
+    },
+    {
+      "id": 8,
+      "name": "GoPro HERO9 Black",
+      "description": "Action camera with 5K video",
+      "units": 90,
+      "price": 399.99,
+      "companyName": "GoPro",
+      "discontinued": false
+    },
+    {
+      "id": 9,
+      "name": "Microsoft Surface Pro 7",
+      "description": "2-in-1 tablet with detachable keyboard",
+      "units": 150,
+      "price": 749.99,
+      "companyName": "Microsoft",
+      "discontinued": false
+    },
+    {
+      "id": 10,
+      "name": "Fitbit Charge 4",
+      "description": "Fitness tracker with GPS",
+      "units": 45,
+      "price": 149.95,
+      "companyName": "Fitbit",
+      "discontinued": false
+    }
+  ]
+}

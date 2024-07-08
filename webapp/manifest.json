@@ -1,0 +1,118 @@
+{
+  "_version": "1.59.0",
+"sap.app": {
+    "id": "project",
+    "type": "application",
+"i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.14.0",
+      "toolsId": "fabdb469-1f66-4796-9edb-43aefb27bf3c"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.125.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+"sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {},
+        "sap.ui.export": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "project.i18n.i18n"
+        }
+      },
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+          "routerClass": "sap.m.routing.Router",
+          "viewType": "XML",
+          "async": true,
+          "viewPath": "project.view",
+          "controlAggregation": "pages",
+          "controlId": "idAppControl",
+          "clearControlAggregation": false
+      },
+      "routes": [
+          {
+              "name": "master",
+              "pattern": "",
+              "target": ["master", "detail"]
+          },
+          {
+              "name": "detail",
+              "pattern": "detail/{id}",
+              "target": ["master", "detail"]
+          }
+      ],
+      "targets": {
+          "master": {
+              "viewName": "Master",
+              "viewId": "Master",
+              "viewLevel": 1,
+              "controlAggregation": "masterPages"
+          },
+          "detail": {
+              "viewName": "Detail",
+              "viewId": "Detail",
+              "viewLevel": 2,
+              "controlAggregation": "detailPages"
+          }
+      }  
+    },
+    "rootView": {
+      "viewName": "project.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

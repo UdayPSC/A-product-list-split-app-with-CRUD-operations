@@ -1,0 +1,18 @@
+<mvc:View
+    controllerName="project.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout">
+    <SplitApp id="idAppControl">
+        <masterPages>
+            <mvc:XMLView id="_IDGenXMLView1" viewName="project.view.Master"/>
+        </masterPages>
+        <detailPages>
+            <mvc:XMLView id="_IDGenXMLView2" viewName="project.view.Detail"/>
+        </detailPages>
+        
+        <!-- <layoutData>
+            <layout:SplitterLayoutData id="_IDGenSplitterLayoutData1" size="500px" />
+        </layoutData> -->
+    </SplitApp>
+</mvc:View>
